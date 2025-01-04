@@ -2,16 +2,13 @@
 
 # Présentation
 
-![speaker](./assets/images/jf.jpg)
-![badge](./assets/images/gde.png)
+![speaker](./assets/images/aurelien.png)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
-## Jean-François Garreau
+## Aurélien Joly
 
-### CTO front
-
+### Dev Backend Java
 <!-- .element: class="icon-rule icon-first" -->
 
-### @jefbinomed
-
+### @CaptainCrunch59
 <!-- .element: class="icon-twitter icon-second" -->
