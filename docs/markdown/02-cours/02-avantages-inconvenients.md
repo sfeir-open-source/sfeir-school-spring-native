@@ -59,6 +59,13 @@
       <li>Impact sur l’expérience développeur </li>
     </ul>
   </li>
+  <br />
+  <li>Compilation gourmande en ressource🕒
+    <ul>
+      <li>Consommation élevée de mémoire et CPU pendant le processus de compilation</li>
+      <li>Nécessite des poste de dév puissant ( min 16go RAM )</li>
+    </ul>
+  </li>
 </ul>
 
 ##==##
@@ -73,6 +80,14 @@
       <li>Certaines dépendances populaires peuvent être partiellement ou totalement incompatibles </li>
     </ul>
   </li>
+  <br />
+  <li>Perte de portabilité ⚠️
+    <ul>
+      <li>L'executable natif est spécifique au hardware sur lequel il a été compilé</li>
+      <li>Perte de la possibilité d'éxecuter sur n'importe quel machine/JVM</li>
+      <li>La conteneurisation rend cette problèmatique transparente</li>
+    </ul>
+  </li>  
 </ul>
 
 
