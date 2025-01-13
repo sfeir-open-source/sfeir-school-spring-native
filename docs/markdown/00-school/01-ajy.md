@@ -9,6 +9,3 @@
 
 ### Dev Backend Java
 <!-- .element: class="icon-rule icon-first" -->
-
-### @CaptainCrunch59
-<!-- .element: class="icon-twitter icon-second" -->
