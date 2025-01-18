@@ -9,8 +9,10 @@
   </li>
   <li>
     <strong> GraalVM Native Image </strong> : vérifier l'installation avec <code> native-image --version </code>
+    <a href="https://www.graalvm.org/"> https://www.graalvm.org/ </a>
   </li>
 </ul>
+
 ##==##
 
 # Ajout de la configuration GraalVM

@@ -2,7 +2,7 @@
 
 
 <ul>
-  <li class="fragment">Démarrage ultra-rapide 🚀
+  <li class="fragment"><strong>Démarrage ultra-rapide 🚀 </strong>
     <ul>
       <li>Les binaires natifs s'exécutent directement sans passer par une JVM</li>
       <li>Temps de démarrage réduit à quelques millisecondes</li>
@@ -10,7 +10,7 @@
   </li>
 
   <br />
-  <li class="fragment">Pas de warmup ⚡️
+  <li class="fragment"> <strong> Pas de warmup ⚡️</strong>
     <ul>
       <li>Optimisations effectuées lors du build time grâce à la compilation AOT (Ahead Of Time)</li>
       <li>L'exécutable est directement prêt à tourner à pleine performance dès son démarrage</li>
@@ -18,7 +18,7 @@
   </li>
 
   <br />
-  <li class="fragment">Faible utilisation des ressources 💾
+  <li class="fragment"> <strong>Faible utilisation des ressources 💾 </strong>
     <ul>
       <li>Consommation mémoire réduite</li>
       <li>Pas de surcharge liée à la compilation dynamique</li>
@@ -31,7 +31,7 @@
 # Les avantages
 
 <ul>
-  <li class="fragment">Packaging compact 📦
+  <li class="fragment"> <strong> Packaging compact 📦 </strong>
     <ul>
       <li>Binaires plus petits, adaptés aux containers légers</li>
       <li>Facilité de déploiement dans des environnements modernes</li>
@@ -39,7 +39,7 @@
   </li>
 
   <br />
-  <li class="fragment">Réduction des coûts d'infrastructure 💰
+  <li class="fragment"> <strong> Réduction des coûts d'infrastructure 💰  </strong>
     <ul>
       <li>Moins de ressources nécessaires pour exécuter l'application</li>
     </ul>
@@ -52,7 +52,7 @@
 # Les contreparties
 
 <ul>
-  <li>Compilation très lente 🕒
+  <li> <strong> Compilation très lente 🕒</strong>
     <ul>
       <li>Analyse approfondie de l'application pour identifier les chemins d'exécution</li>
       <li>Consommation élevée de mémoire et CPU pendant le processus de compilation</li>
@@ -60,7 +60,7 @@
     </ul>
   </li>
   <br />
-  <li>Compilation gourmande en ressource🕒
+  <li> <strong> Compilation gourmande en ressource 🕒 </strong>
     <ul>
       <li>Consommation élevée de mémoire et CPU pendant le processus de compilation</li>
       <li>Nécessite des poste de dév puissant ( min 16go RAM )</li>
@@ -73,7 +73,7 @@
 # Les contreparties
 
 <ul>
-  <li>Compatibilité limitée ⚠️
+  <li> <strong> Compatibilité limitée ⚠️ </strong>
     <ul>
       <li>GraalVM ne prend pas en charge toutes les librairies Java</li>
       <li>Les bibliothèques qui utilisent des fonctionnalités dynamiques (réflexion, proxies) nécessitent des configurations manuelles</li>
@@ -81,7 +81,7 @@
     </ul>
   </li>
   <br />
-  <li>Perte de portabilité ⚠️
+  <li> <strong> Perte de portabilité ⚠️ </strong>
     <ul>
       <li>L'executable natif est spécifique au hardware sur lequel il a été compilé</li>
       <li>Perte de la possibilité d'éxecuter sur n'importe quel machine/JVM</li>
