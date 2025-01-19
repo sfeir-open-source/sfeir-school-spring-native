@@ -11,7 +11,7 @@
 	<groupId>com.sfeir.codelabs</groupId>
 	<artifactId>springnative-lab</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springnative-lab-workshop-1</name>
+	<name>springnative-lab-workshop-2</name>
 	<description>Spring native codelabs</description>
 	<url/>
 	<licenses>
@@ -34,6 +34,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.graalvm.buildtools/native-maven-plugin -->
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -47,6 +49,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.graalvm.buildtools</groupId>
+				<artifactId>native-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,0 +1,6 @@
+version: '3.5'
+
+services:
+  springnative-lab :
+    container_name: springnative-lab
+    image: com.sfeir.codelabs/library/springnative-lab:latest
