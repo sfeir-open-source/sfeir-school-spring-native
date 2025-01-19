@@ -1,6 +1,8 @@
 # Tâche à réaliser 
 
 Booststrapper une webapp 
+ - maven
+ - java 21
  - Spring Boot 3.4.1
  - Spring Web 
 
