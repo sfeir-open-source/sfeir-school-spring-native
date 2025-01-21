@@ -68,5 +68,5 @@ typings/
 
 #Dev
 docs/test.html
-
+*/target/**
 .idea
