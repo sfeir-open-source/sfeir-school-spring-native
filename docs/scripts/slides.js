@@ -29,12 +29,20 @@ function coursSlides() {
   ];
 }
 
+function docSlides() {
+  return [
+    '03-docs/01-docs.md',
+    '03-docs/02-sondage.md',
+  ];
+}
+
 function formation() {
   return [
     //
     ...schoolSlides(), //
     ...introSlides(), //
     ...coursSlides(), //
+    ...docSlides(), //
   ].map((slidePath) => {
     return { path: slidePath };
   });
