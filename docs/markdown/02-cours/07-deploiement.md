@@ -63,3 +63,94 @@ docker build -t myapp-native .
 docker run -p 8080:8080 myapp-native
   
 ```
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Déployer l'application avec Docker et Spring Boot
+
+```xml
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <configuration>
+        <excludes>
+            <exclude>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+            </exclude>
+        </excludes>
+        <image>
+            <!-- force caches names to prevent them from being cleared-->
+            <name>${project.groupId}/library/${project.artifactId}</name>
+            <buildCache>
+                <volume>
+                    <name>cache-${project.artifactId}.build</name>
+                </volume>
+            </buildCache>
+            <launchCache>
+                <volume>
+                    <name>cache-${project.artifactId}.launch</name>
+                </volume>
+            </launchCache>
+        </image>
+    </configuration>
+    <executions>
+        <execution>
+            <id>build-image</id>
+            <goals>
+                <goal>build-image-no-fork</goal>
+            </goals>
+        </execution>
+        <execution>
+            <goals>
+                <goal>build-info</goal>
+            </goals>
+            <configuration>
+                <additionalProperties>
+                    <encoding.source>UTF-8</encoding.source>
+                    <encoding.reporting>UTF-8</encoding.reporting>
+                </additionalProperties>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Déployer l'application avec Docker et Spring Boot
+
+```xml
+<plugin>
+    <groupId>org.graalvm.buildtools</groupId>
+    <artifactId>native-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>build-native</id>
+            <goals>
+                <goal>compile-no-fork</goal>
+            </goals>
+            <phase>package</phase>
+        </execution>
+    </executions>
+</plugin>
+```
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Déployer l'application avec Docker et Spring Boot
+
+```yaml
+version: '3.5'
+
+services:
+  springnative-lab :
+    container_name: springnative-lab
+    image: com.sfeir.codelabs/library/springnative-lab:latest
+```

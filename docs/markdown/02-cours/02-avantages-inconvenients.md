@@ -75,7 +75,7 @@
 <ul>
   <li> <strong> Compatibilité limitée ⚠️ </strong>
     <ul>
-      <li>GraalVM ne prend pas en charge toutes les librairies Java</li>
+      <li>Toutes les librairies Java ne prennent pas en charge GraalVM</li>
       <li>Les bibliothèques qui utilisent des fonctionnalités dynamiques (réflexion, proxies) nécessitent des configurations manuelles</li>
       <li>Certaines dépendances populaires peuvent être partiellement ou totalement incompatibles </li>
     </ul>
