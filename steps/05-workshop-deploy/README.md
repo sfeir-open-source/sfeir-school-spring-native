@@ -1,4 +1,8 @@
-# Tâche à réaliser 
+# Objectif : déployer notre application avec un Dockerfile
+
+Créer le Dockerfile et le déployer dans une solution docker
+
+# Objectif : déployer notre application avec docker-compose et spring boot
 
 Packager notre app en container, déployer dans une solution docker 
 
