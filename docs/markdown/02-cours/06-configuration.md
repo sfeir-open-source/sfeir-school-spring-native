@@ -96,8 +96,14 @@ public class MyRuntimeHints implements RuntimeHintsRegistrar {
   @Override
   public void registerHints(RuntimeHints hints, ClassLoader classLoader) {
     // Register method for reflection
-    Method method = ReflectionUtils.findMethod(MyClass.class, "sayHello", String.class);
-    hints.reflection().registerMethod(method, ExecutableMode.INVOKE);
+    try {
+      Class<?> messageServiceClass = Class.forName(MessageService.class.getName());
+      Method method = messageServiceClass.getDeclaredMethod("secretMessage");
+      hints.reflection().registerMethod(method, ExecutableMode.INVOKE);
+      hints.reflection().registerConstructor(messageServiceClass.getDeclaredConstructor(), ExecutableMode.INVOKE);
+    } catch (ClassNotFoundException | NoSuchMethodException e) {
+      System.err.println("Error while registering reflection hints: " + e.getMessage());
+    }
 
     // Register resources
     hints.resources().registerPattern("my-resource.txt");
