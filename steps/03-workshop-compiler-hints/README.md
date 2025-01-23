@@ -43,7 +43,7 @@ public HelloController() {
 </details>
 
 
-- Vous pouvez tester le bon fonctionnement en testant l'endpoint `/actuator/health` via une JVM
+- Vous pouvez tester le bon fonctionnement en testant l'endpoint `/app/health` via une JVM
 (possible de tester avec HTTP client d'Intellij -> resources/http-client/get-actuator.http)
 
 - Essayer de compiler en native et constater l'erreur
