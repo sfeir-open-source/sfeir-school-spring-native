@@ -84,3 +84,38 @@ public ResponseEntity<String> testReflection() {
   (possible de tester avec HTTP client d'Intellij -> resources/http-client/reflection.http)
 - Essayer de compiler en native et retester l'endpoint
 - Ajouter le hint nécessaire pour que l'endpoint fonctionne
+
+
+## Objectif : Gérer le cas des ressources
+
+- Ajouter un fichier `src/main/resources/secret.txt` qui contient un message
+
+- Ajouter un endpoint /resource qui lit le contenu du fichier secret.txt et l'affiche 
+
+<details>
+<summary>Voir comment faire</summary>
+
+``` java
+@GetMapping("/resource")
+public ResponseEntity<String> testResource() {
+    try {
+        InputStream fileStream = getClass().getClassLoader().getResourceAsStream("test.txt");
+        String content = new BufferedReader(
+                new InputStreamReader(fileStream, StandardCharsets.UTF_8))
+                .lines()
+                .collect(Collectors.joining("\n"));
+        return ResponseEntity.ok(content);
+    } catch (Exception e) {
+        return ResponseEntity.status(500)
+                .body(e.getMessage());
+    }
+}
+```
+</details>
+
+- Vous pouvez tester le bon fonctionnement en testant l'endpoint `/resource` via une JVM
+  (possible de tester avec HTTP client d'Intellij -> resources/http-client/reflection.http)
+- Essayer de compiler en native et retester l'endpoint
+- Ajouter le hint nécessaire pour que l'endpoint fonctionne
+
+- Supprimer le hint et essayer d'ajouter le hint de façon statique (resource-config.json)

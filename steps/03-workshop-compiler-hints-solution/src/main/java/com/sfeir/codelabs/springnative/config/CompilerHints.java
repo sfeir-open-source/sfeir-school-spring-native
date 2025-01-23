@@ -25,5 +25,7 @@ public class CompilerHints implements RuntimeHintsRegistrar {
         } catch (ClassNotFoundException | NoSuchMethodException e) {
             System.err.println("Error while registering reflection hints: " + e.getMessage());
         }
+        //step 3 : resource
+        hints.resources().registerPattern("test.txt");
     }
 }

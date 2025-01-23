@@ -11,7 +11,12 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Method;
+import java.nio.charset.StandardCharsets;
+import java.util.stream.Collectors;
 
 @RestController
 public class HelloController {
@@ -53,5 +58,21 @@ public class HelloController {
             return ResponseEntity.status(500)
                     .body(e.getMessage());
         }
+    }
+
+    @GetMapping("/resource")
+    public ResponseEntity<String> testResource() {
+        try {
+            InputStream fileStream = getClass().getClassLoader().getResourceAsStream("test.txt");
+            String content = new BufferedReader(
+                    new InputStreamReader(fileStream, StandardCharsets.UTF_8))
+                    .lines()
+                    .collect(Collectors.joining("\n"));
+            return ResponseEntity.ok(content);
+        } catch (Exception e) {
+            return ResponseEntity.status(500)
+                    .body(e.getMessage());
+        }
+
     }
 }
