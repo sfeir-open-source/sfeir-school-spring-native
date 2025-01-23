@@ -88,7 +88,7 @@ public ResponseEntity<String> testReflection() {
 
 ## Objectif : Gérer le cas des ressources
 
-- Ajouter un fichier `src/main/resources/secret.txt` qui contient un message
+- Ajouter un fichier `src/main/resources/test.txt` qui contient un message
 
 - Ajouter un endpoint /resource qui lit le contenu du fichier secret.txt et l'affiche 
 
