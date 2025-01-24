@@ -1,6 +1,6 @@
 # Slides
 
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-xxx/).
+You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-spring-native/#/).
 
 ## Develop
 
