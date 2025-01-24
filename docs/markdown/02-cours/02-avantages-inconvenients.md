@@ -52,15 +52,14 @@
 # Les contreparties
 
 <ul>
-  <li> <strong> Compilation très lente 🕒</strong>
+  <li class="fragment"> <strong> Compilation très lente 🕒</strong>
     <ul>
       <li>Analyse approfondie de l'application pour identifier les chemins d'exécution</li>
-      <li>Consommation élevée de mémoire et CPU pendant le processus de compilation</li>
       <li>Impact sur l’expérience développeur </li>
     </ul>
   </li>
   <br />
-  <li> <strong> Compilation gourmande en ressource 🕒 </strong>
+  <li class="fragment"> <strong> Compilation gourmande en ressource 🕒 </strong>
     <ul>
       <li>Consommation élevée de mémoire et CPU pendant le processus de compilation</li>
       <li>Nécessite des poste de dév puissant ( min 16go RAM )</li>
@@ -73,7 +72,7 @@
 # Les contreparties
 
 <ul>
-  <li> <strong> Compatibilité limitée ⚠️ </strong>
+  <li class="fragment"> <strong> Compatibilité limitée ⚠️ </strong>
     <ul>
       <li>Toutes les librairies Java ne prennent pas en charge GraalVM</li>
       <li>Les bibliothèques qui utilisent des fonctionnalités dynamiques (réflexion, proxies) nécessitent des configurations manuelles</li>
@@ -81,7 +80,7 @@
     </ul>
   </li>
   <br />
-  <li> <strong> Perte de portabilité ⚠️ </strong>
+  <li class="fragment"> <strong> Perte de portabilité ⚠️ </strong>
     <ul>
       <li>L'executable natif est spécifique au hardware sur lequel il a été compilé</li>
       <li>Perte de la possibilité d'éxecuter sur n'importe quel machine/JVM</li>
